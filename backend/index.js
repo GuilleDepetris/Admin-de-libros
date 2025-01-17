@@ -8,6 +8,12 @@ const multer = require("multer");
 const path = require("path");
 const cors = require("cors");
 
+app.use(cors({
+  origin: ['https://admin-de-libros-zr19.vercel.app/'],
+}));
+
+
+
 // Initializations
 const app = express();
 require("./database");

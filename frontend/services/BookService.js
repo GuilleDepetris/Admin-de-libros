@@ -1,6 +1,6 @@
 class BookService {
     constructor(){
-        this.URI = 'https://admin-de-libros-zr19.vercel.app/api/books';
+        this.URI = '/api/books';
     }
     async getBooks(){
         const response = await fetch(this.URI)
