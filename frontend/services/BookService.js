@@ -1,6 +1,10 @@
 class BookService {
     constructor(){
-        this.URI = '/api/books';
+        this.URI =
+      process.env.NODE_ENV === "production"
+        ? "https://admin-de-libros-zr19-rbjujs4dz-guillermos-projects-469504d1.vercel.app/api/books" // URL de producción
+        : "http://localhost:3000/api/books"; // URL de desarrollo
+  
     }
     async getBooks(){
         const response = await fetch(this.URI)
